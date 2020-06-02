@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Birthday Animation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>    
+    <body>
+        <div class="wavy">
+            <span style="--i:1;">H</span>
+            <span style="--i:2;">A</span>
+            <span style="--i:3;">P</span>
+            <span style="--i:4;">P</span>
+            <span style="--i:5;">Y</span>
+            <span style="--i:6;">B</span>
+            <span style="--i:7;">I</span>
+            <span style="--i:8;">R</span>
+            <span style="--i:9;">T</span>
+            <span style="--i:10;">H</span>
+            <span style="--i:11;">D</span>
+            <span style="--i:12;">A</span>
+            <span style="--i:13;">Y</span>
+            <span style="--i:14;">!</span>
+            <span style="--i:15;">!</span>
+            <span style="--i:16;">:</span>
+            <span style="--i:17;">)</span>
+
+        </div>
+    <style>
+        body{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    background: #000;
+    }
+    .wavy{
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent,rgba(0,0,0,0,2));
+    }
+    .wavy span{
+        position:relative;
+        display: inline-block;
+        color: ghostwhite;
+        font-size :2pc;
+        text-transform: capitalize;
+        animation : animate 1s ease-in-out infinite;
+        animation-delay: calc(0.1s * var(--i) );
+    }
+    @keyframes animate{
+        0%{
+            transform: translateY(0px);
+        }
+        20%{
+            transform: translateY(-20px);
+        }
+        40%,100%{
+            transform:translateY(0px);
+        }
+    }
+    </style>    
+        
+    </body>
+</html>  
